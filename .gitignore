@@ -1,0 +1,94 @@
+# === 依赖 ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === 构建产物 ===
+dist/
+build/
+out/
+*.tgz
+
+# === Electron 相关 ===
+*.electron/
+release/
+app/dist/
+
+# === Python 相关 ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist-python/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === IDE / 编辑器 ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# === Claude 本地配置 ===
+.claude/settings.local.json
+.claude/memory/
+
+# === 环境变量 / 密钥 ===
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+.secrets
+credentials.json
+
+# === 操作系统 ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# === 日志 ===
+*.log
+logs/
+*.log.*
+
+# === 临时文件 ===
+tmp/
+temp/
+*.tmp
+*.cache
+.cache/
+
+# === 测试覆盖率 ===
+coverage/
+.nyc_output/
+
+# === 其他 ===
+*.pid
+*.seed
+*.pid.lock
+.lock-wscript
+workspace.code-workspace
+
+# === 大型模型文件 ===
+*.pt
+*.onnx
+*.zip
+*.ppn
+pretrained_models/

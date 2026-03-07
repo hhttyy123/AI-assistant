@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音唤醒助手</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-microphone"></i> 语音唤醒助手</h1>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span class="status-text">未连接</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <i class="fas fa-play"></i> 开始监听
+                </button>
+                <button id="stopBtn" class="btn btn-danger" disabled>
+                    <i class="fas fa-stop"></i> 停止监听
+                </button>
+                <button id="clearBtn" class="btn btn-secondary">
+                    <i class="fas fa-trash"></i> 清空对话
+                </button>
+            </div>
+
+            <div class="wake-word-info">
+                <p><strong>唤醒词:</strong> "小笨"</p>
+                <p style="font-size: 12px; color: #666; margin-top: 5px;">使用 Porcupine 唤醒词引擎，低延迟高精度</p>
+            </div>
+
+            <div class="chat-container">
+                <div id="messages" class="messages"></div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="输入消息..." disabled>
+                <button id="sendBtn" class="btn btn-send" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>说出"小笨"开始对话（系统已自动开始监听）</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
